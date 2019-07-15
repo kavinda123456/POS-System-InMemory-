@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DashBoard</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome-free-5.8.2-web/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"href="css/myStyke.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+    </style>
+
+
+</head>
+<body>
+<!-----------------nav_st------------------------------->
+<nav class="navbar m_navbar fixed-top">
+    <div id="logo">
+        <div class="col-md-4" style="font-size: 40px;font-family: 'Anton', sans-serif;"><i class="fas fa-smile-beam"style="padding:15px"></i>POS System</div>
+    </div>
+    <div id="acc"></div>
+</nav>
+<div id="side_nav">
+
+    <ul class="nav flex-column">
+        <li class="nav-item" id="nav1">
+            <a class="nav-link active" href="customers.html"><img src="image/Customer_48px.png" height="48" width="48"/>Customer</a>
+        </li>
+        <li class="nav-item" style="font-size: 35px">
+            <a class="nav-link" href="items.html"><img src="image/Ingredients_48px.png" height="48" width="48"/>Item</a>
+        </li>
+        <li class="nav-item" style="font-size: 35px">
+            <a class="nav-link" href="orders.html"><img src="image/Purchase Order_48px.png" height="48" width="48"/>Order</a>
+        </li>
+        <li class="nav-item" style="font-size: 35px">
+            <a class="nav-link" href="reports.html"><img src="image/Supplier_50px.png" height="50" width="50"/>Order View</a>
+        </li>
+    </ul>
+
+
+</div>
+<!--------------------Body------------------------------>
+<div class="m_content" style="padding-top: 20px">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-xs-6">
+                <!-- small box -->
+                <a href="#">
+                <div class="small-box color1">
+                    <div class="inner">
+                        <h3>150</h3>
+
+                        <p>Orders</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-xs-6">
+                <!-- small box -->
+                <a href="#">
+                <div class="small-box color2">
+                    <div class="inner">
+                        <h3>100</h3>
+
+                        <p>Customers</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-xs-6">
+                <!-- small box -->
+                <a href="#">
+                <div class="small-box color3">
+                    <div class="inner">
+                        <h3>85%</h3>
+
+                        <p>Growth</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-xs-6">
+                <!-- small box -->
+                <a href="#">
+                <div class="small-box color4">
+                    <div class="inner">
+                        <h3>1.5k</h3>
+
+                        <p>Items</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="container row">
+            <div class="col-lg-6 col-xs-12">
+                <div class="m_shadow">
+                <canvas id="myChart"></canvas>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xs-12">
+                <div class="m_shadow">
+                    <canvas id="myChart2"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------------------------Footer------------------------->
+    <footer class="modal-footer">
+        <span>© 2019 kevin POS System. All rights reserved.</span>
+    </footer>
+</div>
+
+<!-----------------------scripts------------------------>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Items</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome-free-5.8.2-web/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"href="css/myStyke.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+    </style>
+</head>
+<body>
+<!-----------------nav_st------------------------------->
+<nav class="navbar m_navbar fixed-top">
+    <div id="logo">
+        <div class="col-md-4" style="font-size: 40px;font-family: 'Anton', sans-serif;"><i class="fas fa-smile-beam"style="padding:15px"></i>POS System</div>
+    </div>
+    <div id="acc"></div>
+</nav>
+<div id="side_nav">
+
+    <ul class="nav flex-column">
+        <li class="nav-item" id="nav1">
+            <a class="nav-link active" href="customers.html"><img src="image/Customer_48px.png" height="48" width="48"/>Customer</a>
+        </li>
+        <li class="nav-item" style="font-size: 35px">
+            <a class="nav-link" href="items.html"><img src="image/Ingredients_48px.png" height="48" width="48"/>Item</a>
+        </li>
+        <li class="nav-item" style="font-size: 35px">
+            <a class="nav-link" href="orders.html"><img src="image/Purchase Order_48px.png" height="48" width="48"/>Order</a>
+        </li>
+        <li class="nav-item" style="font-size: 35px">
+            <a class="nav-link" href="reports.html"><img src="image/Supplier_50px.png" height="50" width="50"/>Order View</a>
+        </li>
+    </ul>
+
+</div>
+<!--------------------Body------------------------------>
+<div class="m_content">
+    <div class="card-header">
+        <h3>Items Manager</h3>
+    </div>
+    <div class="m_card">
+        <form>
+
+            <div class="form-group">
+                <label>Item Code</label>
+                <input type="text" class="form-control" placeholder="ItemCode">
+            </div>
+            <div class="form-group">
+                <label>Item Name</label>
+                <input type="text" class="form-control" placeholder="ItemName">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label>Unit Price</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="UnitPrice"
+                               aria-label="Dollar amount (with dot and two decimal places)">
+                        <div class="input-group-append">
+                            <span class="input-group-text">$</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Quantity</label>
+                    <input type="text" name="qty" class="form-control" placeholder="Qty">
+                </div>
+            </div>
+
+
+            <button id="add" type="button" onclick="addRow()" class="btn btn-primary">ADD</button>
+            <button id="update" onclick="updateRow()" type="button" class="btn btn-success">UPDATE</button>
+            <button id="cancel" type="button" class="btn btn-secondary">CANCEL</button>
+            <button id="delete" onclick="deleteRow(row)" type="button" class="btn btn-danger">DELETE</button>
+        </form>
+    </div>
+
+    <div class="card-header">
+        <h3>View Items</h3>
+    </div>
+    <div class="m_card">
+        <form action="">
+            <div class="form-row">
+            </div>
+        </form>
+        <table class="table table-hover">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">ItemCode</th>
+                <th scope="col">ItemName</th>
+                <th scope="col">UnitPrice</th>
+                <th scope="col">Qty</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>Otto</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-------------------------Footer------------------------->
+    <footer class="modal-footer">
+        <span>© 2019 kevin POS System. All rights reserved.</span>
+    </footer>
+</div>
+
+<!-----------------------scripts------------------------>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/myScripts.js"></script>
+<script>
+    $("#update").hide();
+    $("#cancel").hide();
+    $("#delete").hide();
+</script>
+</body>
+</html>
